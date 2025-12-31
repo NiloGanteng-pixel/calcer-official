@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Calcer_Official</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="./logo_calcer.png">
+<link rel="apple-touch-icon" href="./logo_calcer.png">
+
+
+
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+<!-- CSS INTRO -->
+<style>
+
+
+/* Konten Tengah */
+.intro-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.intro-logo {
+    width: 180px;
+    margin-bottom: 20px;
+    animation: fadeUp 1.5s ease forwards;
+    filter: drop-shadow(0 0 30px rgba(255,255,255,0.9));
+}
+
+.intro-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+    animation: fadeUp 2s ease forwards;
+}
+
+#startBtn {
+    padding: 12px 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #0f172a;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#startBtn:hover {
+    box-shadow: 0 0 25px white;
+    transform: scale(1.05);
+}
+
+
+/* Klik MULAI */
+#intro.active .cloud-left {
+    left: 15%;
+}
+
+#intro.active .cloud-right {
+    right: 15%;
+}
+
+#intro.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: 1.5s;
+}
+
+/* Animasi */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= INTRO SCREEN ================= -->
+<div id="intro">
+
+    <!-- VIDEO LANGIT -->
+    <video autoplay muted loop playsinline class="intro-video">
+        <source src="intro.mp4" type="video/mp4">
+    </video>
+
+    <!-- KONTEN -->
+    <div class="intro-content">
+        <img src="logo_calcer.png" class="intro-logo" alt="Logo Calcer">
+        <h1 class="intro-title">WELCOME</h1>
+        <button id="startBtn">MULAI</button>
+    </div>
+</div>
+
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loading">
+    <div class="loader-circle-3"></div>
+    <div class="loading-text">LOADING</div>
+</div>
+
+
+
+<!-- HEADER -->
+<header>
+    <img src="logo_calcer.png" class="logo kiri" alt="Logo Calcer">
+    <h1>CALCER FAMILY</h1>
+    <p>Manajemen Informatika</p>
+    <p>Astra Tech</p>
+    <img src="logo_astra.png" class="logo kanan" alt="Logo Astra">
+</header>
+
+<!-- NAVIGASI -->
+<nav>
+    <a href="#" onclick="showSection('beranda')">Beranda</a>
+    <a href="#" onclick="showSection('mahasiswa')">Mahasiswa</a>
+    <a href="#" onclick="showSection('prestasi')">Prestasi</a>
+    <a href="#" onclick="showSection('kenangan')">Kenangan</a>
+</nav>
+<section id="beranda" class="active">
+
+<h2>Profil</h2>
+<div class="profil-beranda">
+    <div class="profil-box">
+    </div>
+    <img src="fotokelas.jpg" class="foto-profil" alt="Foto Kelas">
+        <p>
+            Kelas <strong>Calcer 1C Manajemen Informatika</strong> merupakan kelas
+            dengan mahasiswa bersemangat tinggi di bidang teknologi dan manajemen sistem.
+        </p>
+</div>
+
+<div class="visi-misi">
+    <h3>Visi</h3>
+    <img src="visi.jpg" alt="Visi">
+    <div class="beranda-box">
+        <p>Menjadi kelas unggul dalam bidang teknologi dan manajemen informasi.</p>
+    </div>
+</div>
+
+<div class="visi-misi">
+    <h3>Misi</h3>
+    <img src="misi.jpg" alt="Misi">
+    <div class="beranda-box">
+        <ul>
+            <li>Meningkatkan kemampuan akademik dan praktis mahasiswa.</li>
+            <li>Menciptakan lingkungan belajar yang kolaboratif.</li>
+            <li>Mendorong kreativitas dan inovasi.</li>
+        </ul>
+    </div>
+</div>
+
+</section>
+
+
+<!-- MAHASISWA -->
+<section id="mahasiswa">
+    <h2>Mahasiswa</h2>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'pengurus')">Pengurus</button>
+        <button class="tab-button" onclick="openTab(event, 'anggota')">Anggota</button>
+    </div>
+
+    <!-- PENGURUS -->
+    <div id="pengurus" class="tab-content active">
+        <div class="mahasiswa-grid">
+         <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="ketua_kelas.png" alt="Foto Asli">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ketua-text">
+        <p><strong>Nama :</strong> Muhammad Nabil Nasrullah</p>
+        <p><strong>Jabatan :</strong> Ketua Kelas</p>
+        <p><strong>Prodi :</strong> Manajemen Informatika</p>
+    </div>
+
+</div>
+
+               <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="wakil_kelas.png" alt="Foto wakil">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Siti Aminah</p>
+                    <p><strong>NIM :</strong> 0320250045</p>
+                    <p><strong>Jabatan :</strong> Wakil Kelas</p>
+                </div>
+            </div>
+               <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="kelas.png" alt="Foto bendahara1">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Rian Pratama</p>
+                    <p><strong>NIM :</strong> 0320250060</p>
+                    <p><strong>Jabatan :</strong> Bendahara 1</p>
+                </div>
+            </div>
+                 <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="kelas.png" alt="Foto bendahara2">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Aisyah Rahma</p>
+                    <p><strong>NIM :</strong> 0320250050</p>
+                    <p><strong>Jabatan :</strong> Bendahara 2</p>
+                </div>
+            </div>
+                 <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="kelas.png" alt="Sekretaris">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Dimas Santoso</p>
+                    <p><strong>NIM :</strong> 0320250065</p>
+                    <p><strong>Jabatan :</strong> Sekretaris</p>
+                </div>
+            </div>
+                 <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="PIC_1.png" alt="Foto PIC 1">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                   <p><strong>Nama :</strong> Faris Ardiansyah</p>
+                    <p><strong>Jabatan :</strong> PIC 1 </p>
+                    <p><strong>Prodi :</strong> Manajemen Informatika</p>
+                </div>
+            </div>
+
+                <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="PIC_2.png" alt="Foto pic 2">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Rameyza Fadia Hidayat </p>
+                    <p><strong>Jabatan :</strong> PIC</p>
+                    <p><strong>Prodi :</strong> Manajemen Informatika</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANGGOTA -->
+    <div id="anggota" class="tab-content">
+        <div class="mahasiswa-grid">
+                 <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="anggota_1.png" alt="Foto anggota">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Kharisa Dewi Putri</p>
+                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Prodi :</strong> Manajemen Informatika</p>
+                </div>
+            </div>
+        
+                    <div class="ketua-container">
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+
+            <div class="flip-card-front">
+                <img src="kartu.png" alt="Foto Depan">
+            </div>
+
+            <div class="flip-card-back">
+                <img src="anggota_2.png" alt="Foto anggota">
+            </div>
+
+        </div>
+    </div>
+                <div class="ketua-text">
+                    <p><strong>Nama :</strong> Edsel Parama Mustapa</p>
+                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Prodi :</strong> Manajemen Informatika</p>
+                </div>
+            </div>
+</section>
+
+<!-- PRESTASI -->
+<section id="prestasi">
+    <h2>Prestasi Kelas</h2>
+
+    <div class="prestasi-list">
+
+        <div class="prestasi-item">
+            <div class="prestasi-text">
+                <h3>🏆 Juara 1 5K2S</h3>
+                <p>Berhasil meraih juara pertama klasemen "5K2S PROJECT" Oktober 2025.</p>
+            </div>
+            <img src="juara1_5K2S.png" alt="Juara Web Design">
+        </div>
+
+        <div class="prestasi-item">
+            <div class="prestasi-text">
+                <h3>🥈 Juara 3 FIFA Fun Mabar </h3>
+                <p>Berhasil meraih juara ke tiga  di dalam acara fun mabar </p>
+            </div>
+            <img src="juara_3_funmabar.png" alt="Hackathon">
+        </div>
+
+    
+
+    </div>
+</section>
+
+<!-- KENANGAN -->
+<section id="kenangan">
+    <h2>Kenangan</h2>
+
+    <div class="profil-container">
+        <div class="foto-item"><img src="foto1.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto2.jpeg" alt=""></div>
+        <div class="foto-item"><img src="foto3.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto4.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto5.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto6.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto7.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto8.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto9.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto10.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto11.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto12.jpeg"  alt=""></div>
+        <div class="foto-item"><img src="foto13.jpeg" alt=""></div>
+        <div class="foto-item"><img src="foto14.jpeg" alt=""></div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Preview">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+</div>
+
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2025 Website Kelas 1C - Calcer Family</p>
+</footer>
+
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+
+function openTab(evt, tabName) {
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(tc => tc.classList.remove('active'));
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
+}
+</script>
+
+<!-- ✅ SCRIPT FLIP CARD (WAJIB ADA) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    });
+});
+</script>
+
+<script>
+const images = document.querySelectorAll('.foto-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const caption = document.getElementById('lightbox-caption');
+const closeBtn = document.querySelector('.lightbox-close');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        lightboxImg.src = img.src;
+        caption.textContent = img.alt;
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+});
+
+lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+    }
+});
+
+</script>
+<script>
+document.getElementById("startBtn").addEventListener("click", () => {
+    document.getElementById("loading").classList.add("active");
+
+    setTimeout(() => {
+        document.getElementById("intro").classList.add("hide");
+        document.getElementById("loading").classList.remove("active");
+    }, 2500);
+});
+</script>
+
+
+
+</body>
+
+
+
+</html>
+
