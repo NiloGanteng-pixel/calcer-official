@@ -106,7 +106,29 @@
     <div class="intro-content">
         <img src="logo_calcer.png" class="intro-logo" alt="Logo Calcer">
         <h1 class="intro-title">WELCOME</h1>
-        <button id="startBtn">MULAI</button>
+   <button class="morph-btn">
+  <span class="btn-fill"></span>
+  <span class="shadow"></span>
+  <span class="btn-text">
+    <span style="--i:0">M</span><span style="--i:1">U</span
+    ><span style="--i:2">L</span><span style="--i:3">A</span
+    ><span style="--i:4">I</span>
+  </span>
+  <span class="orbit-dots">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+  <span class="corners">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</button>
+
+
     </div>
 </div>
 
@@ -245,7 +267,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>...</p>
-                    <p><strong>Jabatan :</strong> Bendahara 1</p>
+                    <p><strong>Jabatan :</strong> Bendahara Kelas</p>
                     <p><strong>Prodi :</strong>...</p>
                 </div>
             </div>
@@ -266,7 +288,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>...</p>
-                    <p><strong>Jabatan :</strong> Bendahara 2</p>
+                    <p><strong>Jabatan :</strong> Bendahara Kelas</p>
                     <p><strong>Prodi :</strong>...</p>
                 </div>
             </div>
@@ -287,7 +309,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>...</p>
-                    <p><strong>Jabatan :</strong> Sekretaris </p>
+                    <p><strong>Jabatan :</strong> Sekretaris kelas</p>
                     <p><strong>Prodi :</strong>...</p>
                 </div>
             </div>
@@ -330,7 +352,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Rameyza Fadia Hidayat </p>
-                    <p><strong>Jabatan :</strong> PIC 2</p>
+                    <p><strong>Jabatan :</strong> PIC</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -517,6 +539,16 @@ document.getElementById("startBtn").addEventListener("click", () => {
 });
 </script>
 
+<script>
+document.querySelector(".morph-btn").addEventListener("click", () => {
+    document.getElementById("loading").classList.add("active");
+
+    setTimeout(() => {
+        document.getElementById("intro").classList.add("hide");
+        document.getElementById("loading").classList.remove("active");
+    }, 2500);
+});
+</script>
 
 
 </body>
