@@ -189,7 +189,27 @@
     </div>
 </div>
 
+<!-- INFO KELAS -->
+<div class="info-kelas">
+    <div class="info-box">
+        <h3>👨‍🎓 27</h3>
+        <p>Mahasiswa</p>
+    </div>
+
+    <div class="info-box">
+        <h3>🏆 <span id="prestasiPersen">0%</span></h3>
+        <p>Prestasi</p>
+    </div>
+
+    <div class="info-box">
+        <h3>📅 2025</h3>
+        <p>Angkatan</p>
+    </div>
+</div>
+
 </section>
+
+
 
 
 <!-- MAHASISWA -->
@@ -267,7 +287,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>...</p>
-                    <p><strong>Jabatan :</strong> Bendahara Kelas</p>
+                    <p><strong>Jabatan :</strong> Bendahara I</p>
                     <p><strong>Prodi :</strong>...</p>
                 </div>
             </div>
@@ -288,7 +308,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>Siti Nur Chadijah Nasution</p>
-                    <p><strong>Jabatan :</strong> Bendahara Kelas</p>
+                    <p><strong>Jabatan :</strong> Bendahara II</p>
                     <p><strong>Prodi :</strong>Manajemen Informatika</p>
                 </div>
             </div>
@@ -309,7 +329,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong>Vinilien</p>
-                    <p><strong>Jabatan :</strong> Sekretaris kelas</p>
+                    <p><strong>Jabatan :</strong> Sekretaris Kelas</p>
                     <p><strong>Prodi :</strong>Manajemen Informatika</p>
                 </div>
             </div>
@@ -330,7 +350,7 @@
     </div>
                 <div class="ketua-text">
                    <p><strong>Nama :</strong> Faris Ardiansyah</p>
-                    <p><strong>Jabatan :</strong> PIC 1 </p>
+                    <p><strong>Jabatan :</strong> PIC I  </p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -352,7 +372,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Rameyza Fadia Hidayat </p>
-                    <p><strong>Jabatan :</strong> PIC</p>
+                    <p><strong>Jabatan :</strong> PIC II </p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -375,7 +395,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Althaf Arsya Syarif</p>
-                    <p><strong>Jabatan :</strong> Kebersihan</p>
+                    <p><strong>Jabatan :</strong> Kebersihan Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -401,7 +421,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Kharisa Dewi Putri</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -423,7 +443,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Edsel Parama Mustapa</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -445,7 +465,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Risti Nur Isna Putri</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -467,7 +487,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Muhammad Sakhabalbaith Aozora</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -489,7 +509,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Nadine Shafa Alnayra</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -511,7 +531,7 @@
     </div>
                 <div class="ketua-text">
                     <p><strong>Nama :</strong> Ahmad Mudzakir Hilmi</p>
-                    <p><strong>Jabatan :</strong> Anggota</p>
+                    <p><strong>Jabatan :</strong> Anggota Kelas</p>
                     <p><strong>Prodi :</strong> Manajemen Informatika</p>
                 </div>
             </div>
@@ -660,6 +680,20 @@ document.querySelector(".morph-btn").addEventListener("click", () => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const totalMahasiswa = 27;
+
+    // Hitung jumlah prestasi otomatis
+    const totalPrestasi = document.querySelectorAll('.prestasi-item').length;
+
+    // Hitung persen & bulatkan
+    const persenPrestasi = Math.round((totalPrestasi / totalMahasiswa) * 100);
+
+    // Tampilkan ke beranda
+    document.getElementById("prestasiPersen").textContent = persenPrestasi + "%";
+});
+</script>
 
 </body>
 
