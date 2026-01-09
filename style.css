@@ -1231,6 +1231,43 @@ footer {
     }
 }
 
+/* ============================= */
+/* ===== INFO KELAS ===== */
+/* ============================= */
+.info-kelas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    background: white;
+    padding: 25px 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    min-width: 180px;
+    transition: 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.info-box h3 {
+    font-size: 32px;
+    margin: 0;
+    color: #0f172a;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.info-box p {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #555;
+}
 
 /* ============================= */
 /* ===== PRESTASI DENGAN GAMBAR ===== */
